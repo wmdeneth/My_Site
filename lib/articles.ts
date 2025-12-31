@@ -49,7 +49,7 @@ export const articles: Article[] = [
 ];
 
 export function getArticles(): Article[] {
-  return articles.sort(
+  return [...articles].sort(
     (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
   );
 }
